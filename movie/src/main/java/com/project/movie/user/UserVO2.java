@@ -20,5 +20,6 @@ public class UserVO2 {
 	private String favorite;
 	
 	
+	
 
 }
