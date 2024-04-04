@@ -6,8 +6,6 @@ import java.util.List;
 
 public class StoryServiceimpl implements StoryService {
 
-	//test 
-	//ttt
 	@Override
 	public int s_insert(StoryVO vo) {
 		System.out.println("s_insert()....");
