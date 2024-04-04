@@ -29,12 +29,12 @@ public class NCommentsInterceptor extends HandlerInterceptorAdapter {
 		log.info("user_id:{}",session.getAttribute("user_id"));
 		
 		if(sPath.equals("/m_selectAll.do") 
-				|| sPath.equals("/m_update.do")
-				|| sPath.equals("/m_updateOK.do")
-				|| sPath.equals("/m_delete.do")
-				|| sPath.equals("/m_deleteOK.do")
-				|| sPath.equals("/m_selectOne.do")
-				|| sPath.equals("/m_searchList.do")) {
+				|| sPath.equals("/nc_update.do")
+				|| sPath.equals("/nc_updateOK.do")
+				|| sPath.equals("/nc_delete.do")
+				|| sPath.equals("/nc_deleteOK.do")
+				|| sPath.equals("/nc_selectOne.do")
+				|| sPath.equals("/nc_searchList.do")) {
 			
 			if(session.getAttribute("user_id")==null) {
 				response.sendRedirect("login.do");

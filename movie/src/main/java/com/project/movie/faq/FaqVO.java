@@ -1,5 +1,7 @@
 package com.project.movie.faq;
 
+import lombok.Data;
+
 @Data
 public class FaqVO {
 	private int faq_num;

@@ -1,5 +1,17 @@
 package com.project.movie.news.comments;
 
-public interface NCommentsService {
+import java.util.List;
 
+public interface NCommentsService {
+	public int nc_insert(NCommentsVO vo);
+
+	public int nc_update(NCommentsVO vo);
+
+	public int nc_delete(NCommentsVO vo);
+	
+	public List<NCommentsVO> nc_selectAll(int cpage,int pageBlock);
+
+	public int nc_getSearchTotalRows(String searchKey, String searchWord);
+
+	public int nc_increaseGood(NCommentsVO vo);
 }
