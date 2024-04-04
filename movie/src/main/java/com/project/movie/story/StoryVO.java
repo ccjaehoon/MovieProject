@@ -6,6 +6,7 @@ import lombok.Data;
 
 @Data
 public class StoryVO {
+	//test용 주석
 	private int story_num;
 	private String nickname;	
 	private String storycontent;
