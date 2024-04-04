@@ -36,4 +36,25 @@ public class FaqController {
 		return "home";
 	}
 	
+	@RequestMapping(value = "/f_selectAll.do", method = RequestMethod.GET)
+	public String f_selectAll(int cpage, int pageBlock, Model model) {
+		logger.info("Welcome f_selectAll!");
+
+		return "faq/selectAll";
+	}
+	
+	@RequestMapping(value = "/f_searchList.do", method = RequestMethod.GET)
+	public String f_searchList(int cpage, int pageBlock, Model model, String searchKey, String searchWord) {
+		logger.info("Welcome f_searchList!");
+
+		return "faq/searchList";
+	}
+	
+	@RequestMapping(value = "/f_selectOne.do", method = RequestMethod.GET)
+	public String f_selectOne(FaqVO vo, Model model) {
+		logger.info("Welcome f_selectOne!");
+
+		return "faq/selectOnectAll";
+	}
+	
 }
