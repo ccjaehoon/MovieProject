@@ -18,7 +18,8 @@ public class UserVO2 {
 	private Date birth;
 	private String tel;
 	private String favorite;
-	private String email;
+	
+	
 	
 
 }
