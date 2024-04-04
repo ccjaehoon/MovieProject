@@ -36,7 +36,7 @@ public class NCommentsDAOimpl implements NCommentsDAO {
 
 	@Override
 	public int nc_increaseGood(NCommentsVO vo) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub12312
 		return 0;
 	}
 
