@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 public interface StoryService {
-	
+
 	public int s_insert(StoryVO vo);
 
 	public int s_update(StoryVO vo);
@@ -17,7 +17,7 @@ public interface StoryService {
 	
 	public List<StoryVO> s_selectAll(int cpage,int pageBlock);
 	
-	Date s_getLiveStories(StoryVO vo);
+	public Date s_getLiveStories(StoryVO vo);
 	
 	public int s_removeExpired();
 
