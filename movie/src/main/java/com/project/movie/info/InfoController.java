@@ -10,10 +10,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Handles requests for the application home page.
  */
+@Slf4j
 @Controller
 public class InfoController {
 	
@@ -35,5 +39,55 @@ public class InfoController {
 		
 		return "home";
 	}
+	
+	@RequestMapping(value = "/Info_selectOne.do", method = RequestMethod.GET)
+	public String Info_selectOne(int cpage, int pageBlock, Model model) {
+		
+		
+		return "Info/selectOne";
+	}
+	
+	@RequestMapping(value = "/Info_selectAll.do", method = RequestMethod.GET)
+	public String Info_selectAll(int cpage, int pageBlock, Model model) {
+		
+		
+		return "Info/selectAll";
+	}
+	
+	@RequestMapping(value = "/Info_searchList.do", method = RequestMethod.GET)
+	public String Info_searchList(@RequestParam(defaultValue = "1") int cpage,
+			@RequestParam(defaultValue = "5") int pageBlock, Model model, String searchKey, String searchWord) {
+		
+		
+		return "Info/selectAll";
+	}
+	
+	@RequestMapping(value = "/Info_increaseRecommends.do", method = RequestMethod.GET)
+	public String Info_increaseRecommends(int cpage, int pageBlock, Model model) {
+		
+		
+		return "Info/increaseRecommends";
+	}
+	
+	@RequestMapping(value = "/Info_sortRecommends.do", method = RequestMethod.GET)
+	public String Info_sortRecommends(int recommends, int cpage, int pageBlock, Model model) {
+		
+		
+		return "Info/sortRecommends";
+	}
+	
+	@RequestMapping(value = "/Info_sortDate.do", method = RequestMethod.GET)
+	public String Info_sortDate(@RequestParam(defaultValue = "1") int recommends, @RequestParam(defaultValue = "1") int cpage,
+			@RequestParam(defaultValue = "5") int pageBlock, Model model, String searchKey) {
+		
+		
+		return "Info/sortDate";
+	}
+	
+	
+	
+	
+	
+	
 	
 }
