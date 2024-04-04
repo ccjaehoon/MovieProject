@@ -105,7 +105,7 @@ public class BoardController {
 	public String b_increaseGood(BoardVO vo) {
 		logger.info("Welcome b_increaseGood.do...");
 		
-		return null;
+		return "test";
 	}
 	
 }
