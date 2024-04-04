@@ -2,7 +2,7 @@ package com.project.movie.story;
 
 import java.util.Date;
 import java.util.List;
-
+//11
 public interface StoryDAO {
 
 	public int s_insert(StoryVO vo);
