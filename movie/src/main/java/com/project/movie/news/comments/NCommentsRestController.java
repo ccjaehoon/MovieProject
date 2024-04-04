@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Handles requests for the application home page.
  */
-@RestController
+@Controller
 public class NCommentsRestController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(NCommentsRestController.class);
