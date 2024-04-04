@@ -16,8 +16,8 @@ public class UserVO2 {
 	private String authority;
 	private String gender;
 	private Date birth;
-	private String tel;
-	private String favorite;
+
+	
 	
 	
 
