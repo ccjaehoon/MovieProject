@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 public interface StoryService {
-
+	 // test 
 	public int s_insert(StoryVO vo);
 
 	public int s_update(StoryVO vo);
@@ -20,5 +20,7 @@ public interface StoryService {
 	public Date s_getLiveStories(StoryVO vo);
 	
 	public int s_removeExpired();
+	
+
 
 }
