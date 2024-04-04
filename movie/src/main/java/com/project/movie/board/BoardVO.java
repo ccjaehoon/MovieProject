@@ -5,7 +5,6 @@ import java.sql.Date;
 import lombok.Data;
 
 @Data
-
 public class BoardVO {
 
 	private int board_num;
@@ -19,5 +18,5 @@ public class BoardVO {
 	private int views;
 	private int commentscount;
 	private String report;
-	
+
 }
