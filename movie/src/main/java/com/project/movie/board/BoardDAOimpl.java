@@ -26,8 +26,11 @@ public class BoardDAOimpl implements BoardDAO {
 
 	@Override
 	public int b_update(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		log.info("b_update()...");
+		
+		int flag = sqlSession.update("UPDATE", vo);
+		
+		return flag;
 	}
 
 	@Override
