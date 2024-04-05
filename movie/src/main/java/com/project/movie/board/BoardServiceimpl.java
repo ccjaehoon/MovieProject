@@ -49,7 +49,13 @@ public class BoardServiceimpl implements BoardService {
 	}
 
 	@Override
-	public int b_increaseGood(CommentsVO vo) {
+	public int b_getSearchTotalRows(String searchKey, String searchWord) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int b_increaseGood(BoardVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
