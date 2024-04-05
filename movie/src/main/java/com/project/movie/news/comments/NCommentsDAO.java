@@ -12,7 +12,5 @@ public interface NCommentsDAO {
 	
 	public List<NCommentsVO> nc_selectAll(int cpage,int pageBlock);
 
-	public int nc_getSearchTotalRows(String searchKey, String searchWord);
-
 	public int nc_increaseGood(NCommentsVO vo);
 }
