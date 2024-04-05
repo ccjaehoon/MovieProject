@@ -4,6 +4,7 @@ import lombok.Data;
 import java.util.Date;
 @Data
 public class StoryVO {
+	//getter setter 수정
 	private int story_num;
 	private String nickname;	
 	private String storycontent;
