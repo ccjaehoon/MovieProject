@@ -2,14 +2,26 @@ package com.project.movie.board;
 
 import java.util.List;
 
-import com.project.movie.board.comments.CommentsVO;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Repository
 public class BoardDAOimpl implements BoardDAO {
+	
+	@Autowired
+	private SqlSession sqlSession;
 
 	@Override
 	public int b_insert(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		log.info("b_insert()...");
+		
+		int flag = sqlSession.insert("INSERT", vo);
+		
+		return flag;
 	}
 
 	@Override
