@@ -61,14 +61,6 @@ public class SCommentsDAOimpl implements SCommentsDAO {
 		return vos;
 	}
 
-	@Override
-	public int sc_getTotalRows() {
-		System.out.println("sc_getTotalRows()....");
-
-		int total_rows = 0;
-
-		return total_rows;
-	}
 
 	@Override
 	public Date sc_getLiveStories(SCommentsVO vo) {

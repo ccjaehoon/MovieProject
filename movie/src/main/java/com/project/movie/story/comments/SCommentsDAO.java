@@ -16,8 +16,6 @@ public interface SCommentsDAO {
 	
 	public List<SCommentsVO> sc_selectAll(int cpage,int pageBlock);
 	
-	public int sc_getTotalRows();
-	
 	public Date sc_getLiveStories(SCommentsVO vo);
 	
 	public int sc_removeExpired();
