@@ -97,8 +97,17 @@ public class BoardDAOimpl implements BoardDAO {
 
 	@Override
 	public int b_getSearchTotalRows(String searchKey, String searchWord) {
-		// TODO Auto-generated method stub
-		return 0;
+		log.info("getSearchTotalRows()....");
+
+		int total_rows = 0;
+
+		if (searchKey.equals("title")) {
+			total_rows = sqlSession.selectOne("SEARCH_TOTAL_ROWS_TITLE", "%" + searchWord + "%");
+		} else if (searchKey.equals("nickname")) {
+			total_rows = sqlSession.selectOne("SEARCH_TOTAL_ROWS_NICKNAME", "%" + searchWord + "%");
+		}
+
+		return total_rows;
 	}
 
 	@Override
