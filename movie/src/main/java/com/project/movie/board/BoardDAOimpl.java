@@ -44,8 +44,11 @@ public class BoardDAOimpl implements BoardDAO {
 
 	@Override
 	public BoardVO b_selectOne(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		log.info("b_selectOne()....");
+
+		BoardVO vo2 = sqlSession.selectOne("SELECT_ONE", vo);
+
+		return vo2;
 	}
 
 	@Override
