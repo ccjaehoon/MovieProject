@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 
 public class StoryServiceimpl implements StoryService {
+	
+	
 
 	@Override
 	public int s_insert(StoryVO vo) {

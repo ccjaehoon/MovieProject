@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 public interface StoryService {
+	
 
 	public int s_insert(StoryVO vo);
 
