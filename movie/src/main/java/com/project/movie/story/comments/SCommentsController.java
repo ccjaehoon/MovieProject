@@ -51,13 +51,13 @@ public class SCommentsController {
 	}
 	
 	@RequestMapping(value = "/sc_update.do", method = RequestMethod.GET)
-	public String sc_update(SCommentsVO vo, Model model) {
+	public String sc_update() {
 		logger.info("Welcome sc_update...");
 
 		return "story/comments/update";
 	}
 	@RequestMapping(value = "/sc_updateOK.do", method = RequestMethod.GET)
-	public String sc_updateOK(SCommentsVO vo, Model model) {
+	public String sc_updateOK(SCommentsVO vo) {
 		logger.info("Welcome sc_updateOK...");
 
 		return "story/comments/updateOK";
