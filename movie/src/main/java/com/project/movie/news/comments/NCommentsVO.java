@@ -6,7 +6,6 @@ import lombok.Data;
 
 @Data
 public class NCommentsVO {
-	//VO 수정
 	private int news_comments_num;
 	private String nickname;
 	private String content;
