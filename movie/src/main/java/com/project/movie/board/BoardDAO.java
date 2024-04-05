@@ -19,7 +19,9 @@ public interface BoardDAO {
 	public List<BoardVO> b_searchList(String searchKey, String searchWord, int cpage, int pageBlock);
 
 	public int b_getTotalRows();
+	
+	public int b_getSearchTotalRows(String searchKey, String searchWord);
 
-	public int b_increaseGood(CommentsVO vo);
+	public int b_increaseGood(BoardVO vo);
 
 }

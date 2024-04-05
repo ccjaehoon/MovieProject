@@ -12,9 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.project.movie.info.review.ReviewController;
+
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Handles requests for the application home page.
  */
+@Slf4j
 @Controller
 public class BoardController {
 	
@@ -38,14 +43,14 @@ public class BoardController {
 	public String b_insert() {
 		logger.info("Welcome b_insert.do...");
 		
-		return null;
+		return "board/insert";
 	}
 
 	@RequestMapping(value = "b_insertOK", method = RequestMethod.GET)
 	public String b_insertOK(BoardVO vo) {
 		logger.info("Welcome b_insertOK.do...");
 		
-		return null;
+		return "board/insertOK";
 	}
 	@RequestMapping(value = "b_selectAll", method = RequestMethod.GET)
 	public String b_selectAll(@RequestParam(
@@ -53,7 +58,7 @@ public class BoardController {
 			@RequestParam(defaultValue = "5") int pageBlock, Model model) {
 		logger.info("Welcome b_selectAll.do...");
 		
-		return null;
+		return "board/selectAll";
 	}
 	
 	@RequestMapping(value = "b_searchList", method = RequestMethod.GET)
@@ -63,49 +68,49 @@ public class BoardController {
 			Model model, String searchKey, String searchWord) {
 		logger.info("Welcome b_searchList.do...");
 		
-		return null;
+		return "board/searchList";
 	}
 	
 	@RequestMapping(value = "b_selectOne", method = RequestMethod.GET)
 	public String b_selectOne(BoardVO vo, Model model) {
 		logger.info("Welcome b_insert.do...");
 		
-		return null;
+		return "board/selectOne";
 	}
 	
 	@RequestMapping(value = "b_update", method = RequestMethod.GET)
 	public String b_update(BoardVO vo, Model model) {
 		logger.info("Welcome b_update.do...");
 		
-		return null;
+		return "board/update";
 	}
 	
 	@RequestMapping(value = "b_updateOK", method = RequestMethod.GET)
 	public String b_updateOK(BoardVO vo) {
 		logger.info("Welcome b_updateOK.do...");
 		
-		return null;
+		return "board/updateOK";
 	}
 	
 	@RequestMapping(value = "b_delete", method = RequestMethod.GET)
 	public String b_delete() {
 		logger.info("Welcome b_delete.do...");
 		
-		return null;
+		return "board/delete";
 	}
 	
 	@RequestMapping(value = "b_deleteOK", method = RequestMethod.GET)
 	public String b_deleteOK(BoardVO vo) {
 		logger.info("Welcome b_deleteOK.do...");
 		
-		return null;
+		return "board/deleteOK";
 	}
 	
 	@RequestMapping(value = "b_increaseGood", method = RequestMethod.GET)
 	public String b_increaseGood(BoardVO vo) {
 		logger.info("Welcome b_increaseGood.do...");
 		
-		return "test";
+		return "board/increaseGood";
 	}
 	
 }

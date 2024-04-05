@@ -29,12 +29,6 @@ public class CommentsDAOimpl implements CommentsDAO {
 	}
 
 	@Override
-	public int c_getTotalRows() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
 	public int c_increaseGood(CommentsVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
