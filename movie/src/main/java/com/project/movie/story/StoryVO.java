@@ -2,6 +2,7 @@ package com.project.movie.story;
 
 import java.util.Date;
 
+@
 public class StoryVO {
 	private int story_num;
 	private String nickname;	
