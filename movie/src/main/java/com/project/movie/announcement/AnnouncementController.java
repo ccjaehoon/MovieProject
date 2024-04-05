@@ -4,13 +4,19 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.project.movie.user.UserService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,6 +26,15 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Controller
 public class AnnouncementController {
+	
+	@Autowired
+	private AnnouncementService service;
+	
+	@Autowired
+	private HttpSession session;
+
+	@Autowired
+	private ServletContext sContext;
 	
 	private static final Logger logger = LoggerFactory.getLogger(AnnouncementController.class);
 	
@@ -39,6 +54,7 @@ public class AnnouncementController {
 		
 		return "home";
 	}
+	
 	@RequestMapping(value = "/a_selectOne.do", method = RequestMethod.GET)
 	public String a_selectOne(int cpage, int pageBlock, Model model) {
 		

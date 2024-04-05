@@ -2,6 +2,7 @@ package com.project.movie.story;
 
 import lombok.Data;
 import java.util.Date;
+
 @Data
 public class StoryVO {
 	//getter setter 수정
