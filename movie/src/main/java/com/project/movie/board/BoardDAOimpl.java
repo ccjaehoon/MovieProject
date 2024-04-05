@@ -91,13 +91,16 @@ public class BoardDAOimpl implements BoardDAO {
 
 	@Override
 	public int b_getTotalRows() {
-		// TODO Auto-generated method stub
-		return 0;
+		log.info("b_getTotalRows()....");
+
+		int total_rows = sqlSession.selectOne("TOTAL_ROWS");
+
+		return total_rows;
 	}
 
 	@Override
 	public int b_getSearchTotalRows(String searchKey, String searchWord) {
-		log.info("getSearchTotalRows()....");
+		log.info("b_getSearchTotalRows()....");
 
 		int total_rows = 0;
 
