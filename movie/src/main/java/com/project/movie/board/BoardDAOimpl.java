@@ -1,6 +1,8 @@
 package com.project.movie.board;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,25 +13,25 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Repository
 public class BoardDAOimpl implements BoardDAO {
-	
+
 	@Autowired
 	private SqlSession sqlSession;
 
 	@Override
 	public int b_insert(BoardVO vo) {
 		log.info("b_insert()...");
-		
+
 		int flag = sqlSession.insert("INSERT", vo);
-		
+
 		return flag;
 	}
 
 	@Override
 	public int b_update(BoardVO vo) {
 		log.info("b_update()...");
-		
+
 		int flag = sqlSession.update("UPDATE", vo);
-		
+
 		return flag;
 	}
 
@@ -55,15 +57,36 @@ public class BoardDAOimpl implements BoardDAO {
 	public List<BoardVO> b_selectAll(int cpage, int pageBlock) {
 		log.info("b_selectAll()....");
 
-		List<BoardVO> vos = sqlSession.selectList("SELECT_ALL");
+		int startRow = (cpage - 1) * pageBlock + 1;
+
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		map.put("startRow", startRow - 1);
+		map.put("pageBlock", pageBlock);
+
+		List<BoardVO> vos = sqlSession.selectList("SELECT_ALL_PAGE_BLOCK", map);
 
 		return vos;
 	}
 
 	@Override
 	public List<BoardVO> b_searchList(String searchKey, String searchWord, int cpage, int pageBlock) {
-		// TODO Auto-generated method stub
-		return null;
+		int startRow = (cpage - 1) * pageBlock + 1;
+		log.info("b_searchList()....");
+
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("startRow", startRow-1);
+		map.put("pageBlock", pageBlock);
+		map.put("searchWord", "%" + searchWord + "%");
+
+		List<BoardVO> vos = null;
+
+		if (searchKey.equals("title")) {
+			vos = sqlSession.selectList("SEARCHLIST_PAGE_BLOCK_TITLE", map);
+		} else if (searchKey.equals("nickname")) {
+			vos = sqlSession.selectList("SEARCHLIST_PAGE_BLOCK_NICKNAME", map);
+		}
+
+		return vos;
 	}
 
 	@Override
@@ -83,6 +106,5 @@ public class BoardDAOimpl implements BoardDAO {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
 
 }
