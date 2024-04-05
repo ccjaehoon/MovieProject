@@ -10,6 +10,8 @@ public interface FaqDAO {
 	
 	public List<FaqVO> f_searchList(String searchKey, String searchWord,int cpage,int pageBlock);
 
+	public int f_getTotalRows();
+	
 	public int f_getSearchTotalRows(String searchKey, String searchWord);
 
 }
