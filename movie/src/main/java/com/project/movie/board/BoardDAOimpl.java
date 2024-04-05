@@ -35,8 +35,11 @@ public class BoardDAOimpl implements BoardDAO {
 
 	@Override
 	public int b_delete(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		log.info("b_delete()....");
+
+		int flag = sqlSession.delete("DELETE", vo);
+
+		return flag;
 	}
 
 	@Override
