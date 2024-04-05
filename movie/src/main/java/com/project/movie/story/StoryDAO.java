@@ -2,7 +2,7 @@ package com.project.movie.story;
 
 import java.util.Date;
 import java.util.List;
-//11
+
 public interface StoryDAO {
 
 	public int s_insert(StoryVO vo);
@@ -11,7 +11,8 @@ public interface StoryDAO {
 
 	public int s_delete(StoryVO vo);
 	
-	public List<StoryVO> s_selectOne(StoryVO vo);
+	//public StoryVO selectOneRandom(StoryVO vo); 둘 중 어떤게 맞나요?
+	public List<StoryVO> s_selectOneRandom(StoryVO vo);
 	
 	public List<StoryVO> s_selectAll();
 	
