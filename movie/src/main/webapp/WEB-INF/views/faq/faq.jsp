@@ -69,16 +69,14 @@
     <div>
         <h3>삭제</h3>
 
-        <form action="f_deleteOK.do" method="post">
+        <form action="f_selectOne.do" method="post">
 
-            <table id="memberTable">
+            <table id="Table">
                 <tr>
                     <td><label for="faq_faq_num">번호:</label></td>
-                    <td>[${param.faq_faq_num}]를 삭제하시겠습니까?
-                    	<input type="hidden" id="faq_num" name="faq_num" value="${param.faq_num}" placeholder="번호"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit" value="삭제"></td>
+                  
                 </tr>
             </table>
         </form>

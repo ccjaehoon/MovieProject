@@ -2,6 +2,9 @@ package com.project.movie.announcement;
 
 import java.util.Date;
 
+import lombok.Data;
+
+@Data
 public class AnnouncementVO {
 	
 	private int announcement_num;

@@ -29,15 +29,11 @@ public class NCommentsServiceimpl implements NCommentsService {
 	}
 
 	@Override
-	public int nc_getSearchTotalRows(String searchKey, String searchWord) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
 	public int nc_increaseGood(NCommentsVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+
 
 }

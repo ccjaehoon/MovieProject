@@ -5,6 +5,8 @@ import java.util.List;
 
 public interface AnnouncementDAO {
 	
+	
+	
 	public AnnouncementVO a_selectOne(AnnouncementVO vo);
 
 	public List<AnnouncementVO> a_selectAll(int cpage, int pageBlock);
