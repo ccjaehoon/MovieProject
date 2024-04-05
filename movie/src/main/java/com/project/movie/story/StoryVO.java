@@ -19,7 +19,7 @@ public class StoryVO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public StoryVO(int story_num, String nickname, String storycontent, String savename, String file, Date wdate,
+	public StoryVO(int story_num, String nickname, String storycontent, String savename,  String image_file, String video_file, Date wdate,
 			int good, int views, Date duration, String report) {
 		super();
 		this.story_num = story_num;
