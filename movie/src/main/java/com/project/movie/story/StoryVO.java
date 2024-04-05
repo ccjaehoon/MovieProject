@@ -1,8 +1,9 @@
 package com.project.movie.story;
 
+import lombok.Data;
 import java.util.Date;
 
-@
+@Data
 public class StoryVO {
 	private int story_num;
 	private String nickname;	
