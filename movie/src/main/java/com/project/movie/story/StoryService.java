@@ -5,10 +5,6 @@ import java.util.List;
 
 public interface StoryService {
 	
-<<<<<<< HEAD
-	
-=======
->>>>>>> branch 'main' of https://github.com/ccjaehoon/MovieProject.git
 
 	public int s_insert(StoryVO vo);
 
