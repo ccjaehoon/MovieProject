@@ -66,7 +66,7 @@ public class BoardController {
 			@RequestParam(defaultValue = "1") int cpage,
 			@RequestParam(defaultValue = "5") int pageBlock,
 			Model model, String searchKey, String searchWord) {
-		logger.info("Welcome b_searchList.do...");
+		logger.info("Welcome b_searchList.do....");
 		
 		return "board/searchList";
 	}
