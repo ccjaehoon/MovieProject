@@ -38,42 +38,48 @@
 </head>
 <body>
 	<jsp:include page="../top_menu.jsp"></jsp:include>
-    <h1>회원목록</h1>
+    <h1>글목록</h1>
     <hr>
-    <form action="f_searchList.do">
+    <form action="b_searchList.do">
     	<select name="searchKey">
-    		<option value="id">id</option>
-    		<option value="name">name</option>
+    		<option value="title">title</option>
+    		<option value="content">content</option>
     	</select>
-    	<input type="text" name="searchWord" value="ad">
+    	<input type="text" name="searchWord" value="ja">
     	<input type="submit" value="search">
     	
     </form>
-    <table id="faq">
+    <table id="customers">
         <thead>
             <tr>
                 <th>번호</th>
-
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일자</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         	<c:forEach var="vo" items="${vos}">
             <tr>
-                <td><a href="f_selectOne.do?faq_num=${vo.faq_faq_num}">${vo.faq_num}</a></td>
-                
+                <td><a href="b_selectOne.do?num=${vo.num}">${vo.num}</a></td>
+                <td>${vo.title}</td>
+                <td>${vo.writer}</td>
+                <td>${vo.wdate}</td>
+                <td><a href="b_delete.do?num=${vo.num}">글삭제</a></td>
             </tr>
         	</c:forEach>
             
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="7">
+                <td colspan="5">
                 	<c:forEach var="i" begin="1" end="${totalPageCount}">
 	                	<c:if test="${param.searchKey == null }">
-		                	<a href="f_selectAll.do?cpage=${i}">${i} &nbsp;</a>
+		                	<a href="b_selectAll.do?cpage=${i}">${i} &nbsp;</a>
                 		</c:if>
                 		<c:if test="${param.searchKey != null }">
-		                	<a href="f_searchList.do?searchKey=${param.searchKey}&searchWord=${param.searchWord}&cpage=${i}">${i} &nbsp;</a>
+		                	<a href="b_searchList.do?searchKey=${param.searchKey}&searchWord=${param.searchWord}&cpage=${i}">${i} &nbsp;</a>
                 		</c:if>
                 	</c:forEach>
                 </td>

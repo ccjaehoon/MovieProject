@@ -9,8 +9,7 @@
     <title>Document</title>
     <style>
         input[type=text],
-        input[type=password],
-        input[type=tel],
+        textarea,
         select {
             width: 100%;
             padding: 8px 8px;
@@ -33,52 +32,64 @@
         }
 
         input[type=submit]:hover {
-            background-color: #45a049;
+            background-color: #b7e5b9;
         }
 
         div {
             border-radius: 15px;
-            background-color: #bfbfbf;
+            background-color: #f0f0f0;
             padding: 20px;
         }
 
-        #memberTable {
+        #insertTable {
             font-family: Arial, Helvetica, sans-serif;
             border-collapse: collapse;
             width: 100%;
         }
 
-        #memberTable td {
+        #insertTable td {
             border: 1px solid #ddd;
             padding: 8px;
         }
 
-        #memberTable tr:nth-child(even) {
+        #insertTable tr:nth-child(even) {
             background-color: #ebebeb;
         }
 
-        #memberTable tr:hover {
+        #insertTable tr:hover {
             background-color: #ffc6c6;
         }
-
     </style>
 </head>
 
 <body>
     <jsp:include page="../top_menu.jsp"></jsp:include>
     <div>
-        <h3>삭제</h3>
-
-        <form action="f_deleteOK.do" method="post">
-
-            <table id="memberTable">
+        <h1>게시글 수정페이지</h1>
+        <form action="b_updateOK.do" method="post">
+            <table id="insertTable">
                 <tr>
-                    <td><label for="faq_faq_num">번호:</label></td>
-                    <td>[${param.faq_faq_num}]를 삭제하시겠습니까?
-                    	<input type="hidden" id="faq_num" name="faq_num" value="${param.faq_num}" placeholder="번호"></td>
+                    <td><label for="">항목</label></td>
+                    <td>입력</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit" value="삭제"></td>
+                    <td><label for="num">글번호</label></td>
+                    <td>${param.num}<input type="hidden" id="num" name="num" value="${param.num}"></td>
+                </tr>
+                <tr>
+                    <td><label for="title">제목</label></td>
+                    <td><input type="text" id="title" name="title" value="${vo2.title}" placeholder="제목을 입력하세요"></td>
+                </tr>
+                <tr>
+                    <td><label for="content">내용</label></td>
+                    <td><textarea name="content" id="content" cols="30" rows="10">${vo2.content}</textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="writer">작성자</label></td>
+                    <td>${vo2.writer}<input type="hidden" id="writer" name="writer" value="${vo2.writer}" placeholder="작성자를 입력하세요"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="글수정 완료"></td>
                 </tr>
             </table>
         </form>

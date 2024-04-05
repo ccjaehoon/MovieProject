@@ -1,5 +1,8 @@
 package com.project.movie.board.comments;
 
+import lombok.Data;
+
+@Data
 public class CommentsVO {
 	
 	private int comments_num;
