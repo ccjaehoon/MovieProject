@@ -53,8 +53,11 @@ public class BoardDAOimpl implements BoardDAO {
 
 	@Override
 	public List<BoardVO> b_selectAll(int cpage, int pageBlock) {
-		// TODO Auto-generated method stub
-		return null;
+		log.info("b_selectAll()....");
+
+		List<BoardVO> vos = sqlSession.selectList("SELECT_ALL");
+
+		return vos;
 	}
 
 	@Override
