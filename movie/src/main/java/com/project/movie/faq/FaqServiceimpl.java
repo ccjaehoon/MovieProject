@@ -23,9 +23,17 @@ public class FaqServiceimpl implements FaqService {
 	}
 
 	@Override
+	public int f_getTotalRows() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
 	public int f_getSearchTotalRows(String searchKey, String searchWord) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 }
