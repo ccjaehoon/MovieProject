@@ -44,14 +44,14 @@ public class CommentsController {
 	public String c_insert() {
 		logger.info("Welcome c_insert.do...");
 		
-		return "comments/insert";
+		return "board/comments/insert";
 	}
 
 	@RequestMapping(value = "c_insertOK", method = RequestMethod.GET)
 	public String c_insertOK(CommentsVO vo) {
 		logger.info("Welcome c_insertOK.do...");
 		
-		return "comments/insertOK";
+		return "board/comments/insertOK";
 	}
 	@RequestMapping(value = "c_selectAll", method = RequestMethod.GET)
 	public String c_selectAll(@RequestParam(
@@ -59,42 +59,42 @@ public class CommentsController {
 			@RequestParam(defaultValue = "5") int pageBlock, Model model) {
 		logger.info("Welcome c_selectAll.do...");
 		
-		return "comments/selectAll";
+		return "board/comments/selectAll";
 	}
 	
 	@RequestMapping(value = "c_update", method = RequestMethod.GET)
 	public String c_update(CommentsVO vo, Model model) {
 		logger.info("Welcome c_update.do...");
 		
-		return "comments/update";
+		return "board/comments/update";
 	}
 	
 	@RequestMapping(value = "c_updateOK", method = RequestMethod.GET)
 	public String c_updateOK(CommentsVO vo) {
 		logger.info("Welcome c_updateOK.do...");
 		
-		return "comments/updateOK";
+		return "board/comments/updateOK";
 	}
 	
 	@RequestMapping(value = "c_delete", method = RequestMethod.GET)
 	public String c_delete() {
 		logger.info("Welcome c_delete.do...");
 		
-		return "comments/delete";
+		return "board/comments/delete";
 	}
 	
 	@RequestMapping(value = "c_deleteOK", method = RequestMethod.GET)
 	public String c_deleteOK(CommentsVO vo) {
 		logger.info("Welcome c_deleteOK.do...");
 		
-		return "comments/deleteOK";
+		return "board/comments/deleteOK";
 	}
 	
 	@RequestMapping(value = "c_increaseGood", method = RequestMethod.GET)
 	public String c_increaseGood(CommentsVO vo) {
 		logger.info("Welcome c_increaseGood.do...");
 		
-		return "commnets/increaseGood";
+		return "board/comments/increaseGood";
 	}
 	
 }
