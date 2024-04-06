@@ -22,4 +22,9 @@ public interface UserService {
 
 	public int u_getSearchTotalRows(String searchKey, String searchWord);
 
+	public UserVO idCheck(UserVO vo);
+	
+	public UserVO nicknameCheck(UserVO vo);
+	
+	public UserVO emailCheck(UserVO vo);
 }
