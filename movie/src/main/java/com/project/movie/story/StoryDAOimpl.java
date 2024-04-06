@@ -38,8 +38,8 @@ public class StoryDAOimpl implements StoryDAO {
 	}
 	
 	@Override
-	public List<StoryVO> s_selectOneRandom(StoryVO vo) {
-		System.out.println("s_selectOneRandom()....");
+	public List<StoryVO> s_selectRandomList(StoryVO vo) {
+		System.out.println("s_selectRandomList()....");
 		System.out.println(vo);
 		List<StoryVO> vo2 = new ArrayList<StoryVO>();
 		
