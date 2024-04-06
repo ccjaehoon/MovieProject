@@ -13,4 +13,5 @@ public class NewsVO {
 	private Date wdate;
 	private int view;
 	private String save_name;
+	
 }
