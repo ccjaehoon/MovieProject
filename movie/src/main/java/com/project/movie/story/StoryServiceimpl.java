@@ -40,8 +40,8 @@ public class StoryServiceimpl implements StoryService {
 	}
 	
 	@Override
-	public List<StoryVO> s_selectOne(StoryVO vo) {
-		System.out.println("selectOne_Story(page)....");
+	public List<StoryVO> s_selectOneRandom(StoryVO vo) {
+		System.out.println("s_selectOneRandom()....");
 		System.out.println(vo);
 		List<StoryVO> vo2 = new ArrayList<StoryVO>();
 		

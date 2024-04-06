@@ -73,4 +73,22 @@ public class UserDAOimpl implements UserDAO {
 		return 0;
 	}
 
+	@Override
+	public UserVO idCheck(UserVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserVO nicknameCheck(UserVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserVO emailCheck(UserVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
