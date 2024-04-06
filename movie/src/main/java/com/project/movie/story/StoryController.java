@@ -53,13 +53,13 @@ public class StoryController {
 	}
 	
 	@RequestMapping(value = "/story_update.do", method = RequestMethod.GET)
-	public String story_update(StoryVO vo, Model model) {
+	public String story_update() {
 		logger.info("Welcome story_update...");
 
 		return "story/update";
 	}
 	@RequestMapping(value = "/story_updateOK.do", method = RequestMethod.GET)
-	public String story_updateOK(StoryVO vo, Model model) {
+	public String story_updateOK(StoryVO vo) {
 		logger.info("Welcome story_updateOK...");
 
 		return "story/updateOK";
@@ -77,20 +77,19 @@ public class StoryController {
 		return "story/deleteOK";
 	}
 	
+	@RequestMapping(value = "/story_selectOneRandom.do", method = RequestMethod.GET)
+	public String story_selectOneRandom(StoryVO vo, Model model) {
+		logger.info("Welcome story_selectOneRandom...");
+
+		return "story/selectOneRandom";
+	}
+	
 	@RequestMapping(value = "/story_selectAll.do", method = RequestMethod.GET)
 	public String story_selectAll(int cpage, int pageBlock, Model model) {
 		logger.info("Welcome story_selectAll...");
 
 		return "story/selectAll";
 	}
-	
-	@RequestMapping(value = "/story_selectOne.do", method = RequestMethod.GET)
-	public String story_selectOne(StoryVO vo, Model model) {
-		logger.info("Welcome story_selectOne...");
-
-		return "story/selectOne";
-	}
-
 	
 	
 	
