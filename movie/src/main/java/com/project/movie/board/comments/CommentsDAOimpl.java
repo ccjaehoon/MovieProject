@@ -34,4 +34,10 @@ public class CommentsDAOimpl implements CommentsDAO {
 		return 0;
 	}
 
+	@Override
+	public int c_increaseReport(CommentsVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

@@ -113,4 +113,16 @@ public class BoardDAOimpl implements BoardDAO {
 		return total_rows;
 	}
 
+	@Override
+	public int b_increaseGood(BoardVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int b_increaseReport(BoardVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
