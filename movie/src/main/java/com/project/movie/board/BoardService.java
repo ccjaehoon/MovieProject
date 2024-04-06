@@ -22,4 +22,8 @@ public interface BoardService {
 	
 	public int b_getSearchTotalRows(String searchKey, String searchWord);
 
+	public int b_increaseGood(BoardVO vo);
+	
+	public int b_increaseReport(BoardVO vo);
+
 }
