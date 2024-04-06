@@ -69,4 +69,22 @@ public class UserServiceimpl implements UserService {
 		return dao.u_getSearchTotalRows(searchKey, searchWord);
 	}
 
+	@Override
+	public UserVO idCheck(UserVO vo) {
+		
+		return dao.idCheck(vo);
+	}
+
+	@Override
+	public UserVO nicknameCheck(UserVO vo) {
+		
+		return dao.nicknameCheck(vo);
+	}
+
+	@Override
+	public UserVO emailCheck(UserVO vo) {
+		
+		return dao.emailCheck(vo);
+	}
+
 }
