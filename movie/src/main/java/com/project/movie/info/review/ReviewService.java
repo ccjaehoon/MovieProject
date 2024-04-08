@@ -4,19 +4,19 @@ import java.util.List;
 
 public interface ReviewService {
 	
-	public int insert(ReviewVO vo);
+	public int rv_insert(ReviewVO vo);
 	
-	public int update(ReviewVO vo);
+	public int rv_update(ReviewVO vo);
 	
-	public int delete(ReviewVO vo);
+	public int rv_delete(ReviewVO vo);
 	
-	public ReviewVO selectOne(ReviewVO vo);
+	public ReviewVO rv_selectOne(ReviewVO vo);
 
-	public List<ReviewVO> selectAll(int cpage, int pageBlock);
+	public List<ReviewVO> rv_selectAll(int cpage, int pageBlock);
 
-	public int getTotalRows();
+	public int rv_getTotalRows();
 
-	public int getSearchTotalRows(String searchKey, String searchWord);
+	public int rv_getSearchTotalRows(String searchKey, String searchWord);
 	
-	public ReviewVO increaseGood(ReviewVO vo);
+	public ReviewVO rv_increaseGood(ReviewVO vo);
 }
