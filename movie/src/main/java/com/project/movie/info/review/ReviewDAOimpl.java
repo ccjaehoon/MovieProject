@@ -63,5 +63,11 @@ public class ReviewDAOimpl implements ReviewDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	@Override
+	public ReviewVO rv_increaseReport(ReviewVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

@@ -62,23 +62,6 @@ public class InfoController {
 		return "Info/selectAll";
 	}
 	
-	@RequestMapping(value = "/Info_increaseRecommends.do", method = RequestMethod.GET)
-	public String Info_increaseRecommends(int cpage, int pageBlock, Model model) {
-		
-		
-		return "Info/increaseRecommends";
-	}
-	
-	@RequestMapping(value = "/Info_sortRecommends.do", method = RequestMethod.GET)
-	public String Info_sortRecommends(int recommends, int cpage, int pageBlock, Model model) {
-		
-		
-		return "Info/sortRecommends";
-	}
-	
-
-	
-	
 	
 	
 	

@@ -19,4 +19,6 @@ public interface ReviewService {
 	public int rv_getSearchTotalRows(String searchKey, String searchWord);
 	
 	public ReviewVO rv_increaseGood(ReviewVO vo);
+	
+	public ReviewVO rv_increaseReport(ReviewVO vo);
 }
