@@ -9,7 +9,8 @@ import lombok.Data;
 @Data
 public class InfoVO {
 	
-	private String title_eng;
+	private String title;
+	private String nickname;
 	private String genre;
 	private String directors;
 	private String actor;

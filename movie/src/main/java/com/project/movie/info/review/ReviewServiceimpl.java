@@ -16,49 +16,55 @@ public class ReviewServiceimpl implements ReviewService {
 	private ReviewDAO dao;
 
 	@Override
-	public int insert(ReviewVO vo) {
+	public int rv_insert(ReviewVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int update(ReviewVO vo) {
+	public int rv_update(ReviewVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int delete(ReviewVO vo) {
+	public int rv_delete(ReviewVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public ReviewVO selectOne(ReviewVO vo) {
+	public ReviewVO rv_selectOne(ReviewVO vo) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<ReviewVO> selectAll(int cpage, int pageBlock) {
+	public List<ReviewVO> rv_selectAll(int cpage, int pageBlock) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public int getTotalRows() {
+	public int rv_getTotalRows() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int getSearchTotalRows(String searchKey, String searchWord) {
+	public int rv_getSearchTotalRows(String searchKey, String searchWord) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public ReviewVO increaseGood(ReviewVO vo) {
+	public ReviewVO rv_increaseGood(ReviewVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public ReviewVO rv_increaseReport(ReviewVO vo) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -76,14 +76,7 @@ public class InfoController {
 		return "Info/sortRecommends";
 	}
 	
-	@RequestMapping(value = "/Info_sortDate.do", method = RequestMethod.GET)
-	public String Info_sortDate(@RequestParam(defaultValue = "1") int recommends, @RequestParam(defaultValue = "1") int cpage,
-			@RequestParam(defaultValue = "5") int pageBlock, Model model, String searchKey) {
-		
-		
-		return "Info/sortDate";
-	}
-	
+
 	
 	
 	

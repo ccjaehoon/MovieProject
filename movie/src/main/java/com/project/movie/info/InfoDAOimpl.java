@@ -17,51 +17,39 @@ public class InfoDAOimpl implements InfoDAO {
 	private SqlSession sqlSession;
 
 	@Override
-	public InfoDAO selectOne(InfoVO vo) {
+	public InfoDAO i_selectOne(InfoVO vo) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<InfoDAO> selectAll(int cpage, int pageBlock) {
+	public List<InfoDAO> i_selectAll(int cpage, int pageBlock) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<InfoDAO> searchList(String searchKey, String searchWord, int cpage, int pageBlock) {
+	public List<InfoDAO> i_searchList(String searchKey, String searchWord, int cpage, int pageBlock) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public int getTotalRows() {
+	public int i_getTotalRows() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int getSearchTotalRows(String searchKey, String searchWord) {
+	public int i_getSearchTotalRows(String searchKey, String searchWord) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int increaseRecommends(InfoVO vo) {
+	public int i_increaseRecommends(InfoVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
-	}
-
-	@Override
-	public List<InfoDAO> sortRecommends(int recommends, int cpage, int pageBlock) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<InfoDAO> sortDate(Date relaseDate, int cpage, int pageBlock) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

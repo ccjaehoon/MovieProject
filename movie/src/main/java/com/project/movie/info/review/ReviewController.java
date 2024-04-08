@@ -46,82 +46,96 @@ public class ReviewController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/Review_insert.do", method = RequestMethod.GET)
-	public String Review_insert(ReviewVO vo) {
+	@RequestMapping(value = "/Review_rv_insert.do", method = RequestMethod.GET)
+	public String Review_rv_insert(ReviewVO vo) {
 		
 	
-		return "Review_insert";
+		return "Review_rv_insert";
 	}
 	
-	@RequestMapping(value = "/Review_insertOK.do", method = RequestMethod.GET)
-	public String Review_insertOK(ReviewVO vo) {
+	@RequestMapping(value = "/Review_rv_insertOK.do", method = RequestMethod.GET)
+	public String Review_rv_insertOK(ReviewVO vo) {
 		
 	
-		return "Review_insertOK";
+		return "Review_rv_insertOK";
 	}
 	
-	@RequestMapping(value = "/Review_update.do", method = RequestMethod.GET)
-	public String Review_update(ReviewVO vo) {
+	@RequestMapping(value = "/Review_rv_update.do", method = RequestMethod.GET)
+	public String Review_rv_update(ReviewVO vo) {
 		
 	
-		return "Review_update";
+		return "Review_rv_update";
 	}
 	
-	@RequestMapping(value = "/Review_updateOK.do", method = RequestMethod.GET)
-	public String Review_updateOK(ReviewVO vo) {
+	@RequestMapping(value = "/Review_rv_updateOK.do", method = RequestMethod.GET)
+	public String Review_rv_updateOK(ReviewVO vo) {
 		
 	
-		return "Review_updateOK";
+		return "Review_rv_updateOK";
 	}
 	
-	@RequestMapping(value = "/Review_delete.do", method = RequestMethod.GET)
-	public String Review_delete(ReviewVO vo) {
+	@RequestMapping(value = "/Review_rv_delete.do", method = RequestMethod.GET)
+	public String Review_rv_delete(ReviewVO vo) {
 		
 	
-		return "Review_delete";
+		return "Review_rv_delete";
 	}
 	
-	@RequestMapping(value = "/Review_deleteOK.do", method = RequestMethod.GET)
-	public String Review_deleteOK(ReviewVO vo) {
+	@RequestMapping(value = "/Review_rv_deleteOK.do", method = RequestMethod.GET)
+	public String Review_rv_deleteOK(ReviewVO vo) {
 		
 	
-		return "Review_deleteOK";
+		return "Review_rv_deleteOK";
 	}
 	
 	
-	@RequestMapping(value = "/Review_selectOne.do", method = RequestMethod.GET)
-	public String Review_selectOne(int cpage, int pageBlock, Model model) {
+	@RequestMapping(value = "/Review_rv_selectOne.do", method = RequestMethod.GET)
+	public String Review_rv_selectOne(int cpage, int pageBlock, Model model) {
 		
 	
-		return "Review/selectOne";
+		return "Review/rv_selectOne";
 	}
-	@RequestMapping(value = "/Review_selectAll.do", method = RequestMethod.GET)
-	public String Review_selectAll(int cpage, int pageBlock, Model model) {
+	@RequestMapping(value = "/Review_rv_selectAll.do", method = RequestMethod.GET)
+	public String Review_rv_selectAll(int cpage, int pageBlock, Model model) {
 		logger.info("Welcome Review_selectAll!");
 	
-		return "Review/selectAll";
+		return "Review/rv_selectAll";
 	}
-	@RequestMapping(value = "Review_searchList.do", method = RequestMethod.GET)
-	public String Review_searchList(@RequestParam(defaultValue = "1") int cpage,
+	@RequestMapping(value = "Review_rv_searchList.do", method = RequestMethod.GET)
+	public String Review_rv_searchList(@RequestParam(defaultValue = "1") int cpage,
 			@RequestParam(defaultValue = "5") int pageBlock, Model model, String searchKey, String searchWord) {
 		
 
 
-		return "Review/selectAll";
+		return "Review/rv_selectAll";
 	}
 	
-	@RequestMapping(value = "/Review_increaseGood.do", method = RequestMethod.GET)
-	public String Review_increaseGood(ReviewVO vo) {
+	@RequestMapping(value = "/Review_rv_increaseGood.do", method = RequestMethod.GET)
+	public String Review_rv_increaseGood(ReviewVO vo) {
 		
 	
-		return "Review_increaseGood";
+		return "Review_rv_increaseGood";
 	}
 	
-	@RequestMapping(value = "/Review_increaseGoodOK.do", method = RequestMethod.GET)
-	public String Review_increaseGoodOK(ReviewVO vo) {
+	@RequestMapping(value = "/Review_rv_increaseGoodOK.do", method = RequestMethod.GET)
+	public String Review_rv_increaseGoodOK(ReviewVO vo) {
 		
 	
-		return "Review_increaseGoodOK";
+		return "Review_rv_increaseGoodOK";
+	}
+	
+	@RequestMapping(value = "/Review_rv_increaseReport.do", method = RequestMethod.GET)
+	public String Review_rv_increaseReport(ReviewVO vo) {
+		
+	
+		return "Review_rv_increaseReport";
+	}
+	
+	@RequestMapping(value = "/Review_rv_increaseReportOK.do", method = RequestMethod.GET)
+	public String Review_rv_increaseReportOK(ReviewVO vo) {
+		
+	
+		return "Review_rv_increaseReportOK";
 	}
 	
 	
